@@ -2,16 +2,15 @@
 
 :root {
   color-scheme: light;
-  --bg: #f7f4f1;
-  --paper: #ffffff;
-  --ink: #1f2a23;
-  --muted: #58615d;
-  --line: rgba(31, 42, 35, 0.12);
-  --panel: rgba(255, 255, 255, 0.7);
-  --forest: #143e34;
-  --forest-deep: #0d2d28;
-  --ivory: #f2efe9;
-  --sage: #dfe5df;
+  --bg: #f6f1ea;
+  --paper: #f3efe7;
+  --ink: #171d1b;
+  --green: #0e2f2a;
+  --green-2: #123d35;
+  --gold: #bf8d48;
+  --gold-soft: #c9a56d;
+  --line: rgba(19, 32, 28, 0.14);
+  --shadow: rgba(12, 24, 20, 0.14);
 }
 
 html {
@@ -21,11 +20,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, rgba(20, 62, 52, 0.06), transparent 30%),
-    linear-gradient(180deg, #f8f6f3 0%, #f1efe9 100%);
+  background: var(--bg);
   color: var(--ink);
-  font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
 }
 
 body,
@@ -34,15 +31,23 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Georgia", "Times New Roman", serif;
-  letter-spacing: 0.02em;
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
