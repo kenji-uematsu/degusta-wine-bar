@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+---
+<section class="contact section" id="contact" aria-labelledby="contact-title"><p class="eyebrow">LET’S MAKE IT A GOOD TIME.</p><h2 id="contact-title">一杯の予定、<br class="mobile-break" />立てませんか。</h2><p class="body-copy">ご予約も、貸切のご相談も。<br />気になることは、お気軽にお問い合わせください。</p><div class="contact-actions">{site.reservationUrl ? <a class="button" href={site.reservationUrl} target="_blank" rel="noopener noreferrer">ご予約・お問い合わせ <span aria-hidden="true">↗</span></a> : <button type="button" class="button" data-preview-dialog="contact">ご予約・お問い合わせ <span aria-hidden="true">↗</span></button>}{site.instagramUrl ? <a class="button outline-button" href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a> : <button type="button" class="button outline-button" data-preview-dialog="instagram">Instagram <span aria-hidden="true">↗</span></button>}</div><p class="fine-print">予約・問い合わせ先は確認中です。このモックからは予約できません。</p></section>
+<dialog id="preview-dialog" class="preview-dialog" aria-labelledby="preview-title" aria-describedby="preview-description"><form method="dialog"><button class="dialog-close" aria-label="閉じる">×</button></form><p class="eyebrow">DÉGUSTA / PREVIEW</p><h2 id="preview-title">ご予約・お問い合わせ</h2><p id="preview-description"></p><p class="dialog-note">現在はデザイン確認用のモックです。<br />情報の送信や予約受付は行われません。</p><form method="dialog"><button class="button">ページに戻る <span aria-hidden="true">←</span></button></form></dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#preview-dialog');
+  const title = document.querySelector('#preview-title');
+  const description = document.querySelector('#preview-description');
+  document.querySelectorAll<HTMLButtonElement>('[data-preview-dialog]').forEach(button => {
+    button.addEventListener('click', () => {
+      if (!dialog || !title || !description) return;
+      const instagram = button.dataset.previewDialog === 'instagram';
+      title.textContent = instagram ? 'Instagramのご案内' : 'ご予約・お問い合わせ';
+      description.textContent = instagram ? '公式Instagramアカウントは確認中です。確定後、このボタンからお店の最新情報をご覧いただけます。' : '予約・問い合わせ方法は店主確認中です。確定後、電話・Instagram・外部予約サービスなどの正式な窓口につながります。貸切のご相談も同じ窓口で承る予定です。';
+      dialog.showModal();
+    });
+  });
+  dialog?.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } });
+</script>

@@ -1,0 +1,10 @@
+<header class="header" id="top">
+  <a class="logo" href="#top" aria-label="Dégusta wine shop & bar ホーム"><span>Dégusta<span class="logo-dot">.</span></span><small>wine shop & bar</small></a>
+  <nav class="desktop-nav" aria-label="メインナビゲーション"><a href="#about">Dégustaについて</a><a href="#wine">ワインと料理</a><a href="#access">アクセス</a></nav>
+  <a class="header-contact" href="#contact">ご予約・お問い合わせ <span aria-hidden="true">↗</span></a>
+  <details class="mobile-menu"><summary aria-label="メニューを開く">MENU <span aria-hidden="true">☰</span></summary><nav aria-label="モバイルナビゲーション"><a href="#about">Dégustaについて</a><a href="#wine">ワインと料理</a><a href="#access">アクセス</a><a href="#contact">ご予約・お問い合わせ</a></nav></details>
+</header>
+<script>
+  document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', () => document.querySelector('.mobile-menu')?.removeAttribute('open')));
+  document.addEventListener('keydown', (event) => { if(event.key === 'Escape') { const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu'); if(menu?.open) { menu.open = false; menu.querySelector<HTMLElement>('summary')?.focus(); } } });
+</script>
