@@ -5,14 +5,13 @@ test.describe('TOPページ', () => {
   test('正常に表示され、店舗名が確認できる', async ({ page }) => {
     const response = await page.goto('/');
     expect(response?.status()).toBeLessThan(400);
-    await expect(page).toHaveTitle(/Dégusta/);
-    await expect(page.locator('header .logo')).toContainText('Dégusta');
-    await expect(page.locator('header .logo')).toContainText(site.description);
+    await expect(page).toHaveTitle(/Degusta/);
+    await expect(page.locator('header .logo img')).toHaveAttribute('alt', /Degusta/);
   });
 
   test('主要セクションが存在する', async ({ page }) => {
     await page.goto('/');
-    for (const id of ['about', 'our-style', 'wine', 'food', 'space', 'instagram', 'access', 'contact']) {
+    for (const id of ['about', 'our-style', 'menu', 'wine', 'food', 'instagram', 'space', 'access', 'contact']) {
       await expect(page.locator(`#${id}`)).toBeAttached();
     }
   });
@@ -50,11 +49,11 @@ test.describe('Instagram', () => {
     await page.goto('/#instagram');
     const section = page.locator('#instagram');
     if (site.instagramUrl) {
-      const link = section.locator('a', { hasText: 'Instagramを見る' });
+      const link = section.locator('a', { hasText: 'Instagram' });
       await expect(link).toHaveAttribute('href', site.instagramUrl);
       await expect(link).toHaveAttribute('target', '_blank');
     } else {
-      await expect(section.locator('button[data-preview-dialog="instagram"]')).toBeVisible();
+      await expect(section.locator('a')).toHaveCount(0);
     }
   });
 });
@@ -67,3 +66,24 @@ test.describe('問い合わせ', () => {
     await expect(contact.locator('.contact-actions')).toBeVisible();
   });
 });
+
+test.describe('予約CTAの出し分け（2-12）', () => {
+  test('Mobileではtel:リンクが表示される', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'mobile-390', 'mobile-390プロジェクトのみ対象');
+    await page.goto('/');
+    const telCta = page.locator('.hero-actions .reservation-switch a[href^="tel:"]');
+    const anchorCta = page.locator('.hero-actions .reservation-switch a[href="#contact"]');
+    await expect(telCta).toBeVisible();
+    await expect(anchorCta).toBeHidden();
+  });
+
+  test('Tablet/PCでは#contactアンカーが表示される', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name === 'mobile-390', 'tablet/desktopプロジェクトのみ対象');
+    await page.goto('/');
+    const telCta = page.locator('.hero-actions .reservation-switch a[href^="tel:"]');
+    const anchorCta = page.locator('.hero-actions .reservation-switch a[href="#contact"]');
+    await expect(anchorCta).toBeVisible();
+    await expect(telCta).toBeHidden();
+  });
+});
+

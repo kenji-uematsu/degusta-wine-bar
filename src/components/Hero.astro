@@ -1,5 +1,7 @@
+---
+import ReservationLink from './ReservationLink.astro';
+---
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-copy"><p class="eyebrow">YOUR LITTLE WINE STOP.</p><h1 id="hero-title">気軽に、<br />ふらっと<span class="wine-word">ワイン</span>を。</h1><p class="hero-lead">詳しくなくても、おひとりでも。<br />好きな一杯と、心地いい時間に出会う場所。</p><a class="button" href="#contact">ご予約・お問い合わせ <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#about">まずは、Dégustaのこと <span aria-hidden="true">↓</span></a></div>
-  <figure class="hero-photo"><img src="/images/degusta/interior.webp" srcset="/images/degusta/interior-small.webp 768w, /images/degusta/interior.webp 1536w" sizes="(min-width: 1024px) 58vw, 100vw" width="1536" height="1024" alt="明るい木のカウンターでワインと会話を楽しむ時間のイメージ。実店舗・実際の人物ではありません。" fetchpriority="high" /><figcaption>AI生成イメージ / 実店舗写真ではありません</figcaption><span class="photo-note" aria-hidden="true">Wine, talk<br />& a little joy.</span></figure>
-  <div class="hero-foot"><span>ひとりの寄り道も、誰かとの乾杯も。</span><a href="#about">SCROLL <span aria-hidden="true">↓</span></a></div>
+  <div class="hero-copy"><div class="hero-heading"><h1 id="hero-title" class="hero-kicker">ワインがつなぐ、<br />心ほどける時間。</h1><img class="heading-rays" src="/illustrations/rays.svg" width="48" height="52" alt="" aria-hidden="true" /></div><p class="hero-lead">気軽に楽しむワインと、心地よい会話。<br />おひとりでも、詳しくなくても。<br />日常の寄り道に、Degustaへ。</p><div class="hero-actions"><ReservationLink /><span class="welcome-note-wrap"><svg class="welcome-arrow" viewBox="0 0 42 34" fill="none" aria-hidden="true"><path d="M38 28C25 30 11 23 9 7M3 13Q6 10 9 6L16 11" stroke="#a97834" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg><img class="welcome-art" src="/illustrations/welcome.svg" width="426" height="112" alt="お気軽にどうぞ！" /></span></div></div>
+  <figure class="hero-photo"><img src="/images/degusta/store-hero.webp" width="1600" height="1200" alt="Degustaの丸窓と、明るい木のカウンター席" fetchpriority="high" /><span class="photo-note">気軽に、<br />ふらっと<br />ワインを。<img class="badge-wine-icon" src="/illustrations/wine-glass.svg" width="42" height="62" alt="" aria-hidden="true" /></span></figure>
 </section>

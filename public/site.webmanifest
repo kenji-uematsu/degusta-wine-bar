@@ -1,0 +1,37 @@
+{
+  "id": "/",
+  "name": "Degusta ワインショップ＆バー",
+  "short_name": "Degusta",
+  "lang": "ja",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#225b33",
+  "background_color": "#225b33",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

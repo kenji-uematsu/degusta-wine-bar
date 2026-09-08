@@ -1,5 +1,6 @@
 import { defineConfig } from '@playwright/test';
 
+// Dev server is managed separately via `astro dev --background` (see AGENTS.md).
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
@@ -13,10 +14,4 @@ export default defineConfig({
     { name: 'tablet-768', use: { viewport: { width: 768, height: 1024 } } },
     { name: 'desktop-1440', use: { viewport: { width: 1440, height: 900 } } },
   ],
-  webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:4321',
-    reuseExistingServer: true,
-    timeout: 30_000,
-  },
 });
