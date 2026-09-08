@@ -95,4 +95,4 @@
 
 .hero-actions{flex-direction:column;align-items:stretch;width:fit-content;max-width:100%;gap:8px}.welcome-note-wrap{display:flex;align-items:center;justify-content:flex-end;gap:4px;padding-right:4px;pointer-events:none}.hero-actions .welcome-art{width:164px;max-width:calc(100% - 40px);height:auto;margin:0}.welcome-arrow{width:32px;height:30px;flex:0 0 32px;align-self:flex-start}.hero-actions .reservation-switch>.button{width:100%}@media(max-width:767px){.hero-actions{width:100%;max-width:540px;margin-inline:auto}.hero-actions .welcome-art{width:156px}.welcome-note-wrap{padding-right:8px}}
 
-.welcome-note-wrap{gap:2px;padding-right:10px}.hero-actions .welcome-art{width:130px}.welcome-arrow{width:24px;height:25px;flex-basis:24px}@media(max-width:767px){.hero-actions .welcome-art{width:124px}.welcome-note-wrap{padding-right:12px}}
+.welcome-note-wrap{gap:2px;padding-right:0;margin-right:-15px}.hero-actions .welcome-art{width:130px}.welcome-arrow{width:24px;height:25px;flex-basis:24px}@media(max-width:767px){.hero-actions .welcome-art{width:124px}.welcome-note-wrap{padding-right:0;margin-right:-12px}}
