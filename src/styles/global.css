@@ -14,5 +14,6 @@ body{overflow-wrap:break-word}.section>*{min-width:0}.body-copy{color:#5b6557;fo
 @media(min-width:768px){.access-info dd .tel-link{text-decoration:none}}
 .access-info dd .access-map-link{display:flex;width:fit-content;min-height:40px;margin-top:6px;padding:6px 0;gap:16px;font-size:13px}
 .access-info>.access-hours-note{margin:12px 0 0;font-size:12px;line-height:1.8}
+.access-info .last-entry{display:inline-block;font-size:13px;margin-left:4px}
 .concept-intro .eyebrow,.concept-intro h2{text-align:center}
 @media(min-width:768px){.concept-intro .eyebrow,.concept-intro h2{text-align:left}}
