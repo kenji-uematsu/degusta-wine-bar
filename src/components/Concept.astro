@@ -1,13 +1,18 @@
+---
+import { getTranslations } from '../i18n/translations';
+
+const t = getTranslations(Astro.currentLocale);
+---
 <section id="about" class="concept section">
-  <div class="concept-intro"><p class="eyebrow">CONCEPT</p><h2>コンセプト</h2><div class="prose"><p>Degustaは、ワインをもっと身近に、<br />もっと自由に楽しむワインショップ＆バーです。</p><p>「今日はこんな気分」から、一緒に選ぶ一杯。<br />店主やお隣との会話も、お店の楽しみのひとつ。</p><p>お一人様でも、大切な方とでも。<br />どうぞ心ゆくまでおくつろぎください。</p></div></div>
-  <div class="concept-experiences" aria-label="Degustaの2つの楽しみ方">
+  <div class="concept-intro"><p class="eyebrow">CONCEPT</p><h2>{t.concept.heading}</h2><div class="prose"><p>{t.concept.prose[0][0]}<br />{t.concept.prose[0][1]}</p><p>{t.concept.prose[1][0]}<br />{t.concept.prose[1][1]}</p><p>{t.concept.prose[2][0]}<br />{t.concept.prose[2][1]}</p></div></div>
+  <div class="concept-experiences" aria-label={t.concept.experiencesAria}>
     <article class="concept-experience">
-      <img src="/images/degusta/bar-wine-food.webp" width="1600" height="900" alt="オレンジワインのグラスとホタテの焼き物、小鉢のおつまみ" loading="lazy" />
-      <div><p class="eyebrow">BAR</p><h3>グラスワインと、料理を。</h3><p>その日の気分で選ぶ一杯と、<br />ワインに寄り添う料理を店内で。</p></div>
+      <img src="/images/degusta/bar-wine-food.webp" width="1600" height="900" alt={t.concept.barImgAlt} loading="lazy" />
+      <div><p class="eyebrow">BAR</p><h3>{t.concept.barHeading}</h3><p>{t.concept.barText[0]}<br />{t.concept.barText[1]}</p></div>
     </article>
     <article class="concept-experience">
-      <img src="/images/degusta/store-shop.webp" width="900" height="506" alt="手書きの黒板と棚に並ぶ販売用のワインボトル" loading="lazy" />
-      <div><p class="eyebrow">WINE SHOP</p><h3>お気に入りの一本を、おうちへ。</h3><p>ご自宅用にも、贈りものにも。<br />ワインのお買い物だけでもお気軽に。</p></div>
+      <img src="/images/degusta/store-shop.webp" width="900" height="506" alt={t.concept.shopImgAlt} loading="lazy" />
+      <div><p class="eyebrow">WINE SHOP</p><h3>{t.concept.shopHeading}</h3><p>{t.concept.shopText[0]}<br />{t.concept.shopText[1]}</p></div>
     </article>
   </div>
 </section>

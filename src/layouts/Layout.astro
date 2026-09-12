@@ -2,12 +2,20 @@
 import '../styles/global.css';
 import '../styles/reference.css';
 import { site } from '../data/site';
+import { getTranslations } from '../i18n/translations';
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'ja' } = Astro.props;
+const t = getTranslations(lang);
 ---
 <!doctype html>
-<html lang="ja">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="新丸子駅から徒歩3分のDegusta。気軽にグラスワインと料理を楽しめるワインバー・ワインショップです。ワインの購入だけでも、おひとりでもどうぞ。" />
+    <meta name="description" content={t.meta.description} />
     {site.preview && <meta name="robots" content="noindex, nofollow" />}
     <meta name="theme-color" content="#225b33" />
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
@@ -17,7 +25,7 @@ import { site } from '../data/site';
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="application-name" content="Degusta" />
     <meta name="apple-mobile-web-app-title" content="Degusta" />
-    <title>新丸子のワインバー・ワインショップ | Degusta</title>
+    <title>{t.meta.title}</title>
   </head>
-  <body id="top"><a class="skip" href="#main">本文へ移動</a><slot /></body>
+  <body id="top"><a class="skip" href="#main">{t.skipToContent}</a><slot /></body>
 </html>

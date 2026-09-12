@@ -1,1 +1,6 @@
-<section class="wine" id="wine" aria-labelledby="wine-title"><figure><img src="/images/degusta/wine.webp" width="1600" height="900" alt="キャンドルの灯りとオレンジワインのグラス、PHAUNUS-LOUREIROのボトル" loading="lazy" /></figure><div class="menu-item-copy"><p class="eyebrow">WINE</p><h3 id="wine-title">あなたに合う、一杯を。</h3><p class="body-copy">軽め、すっきり、やさしい味。<br />好みを聞きながら一緒に選びます。<br />定期的に入れ替わるワインとの出会いも、お楽しみに。</p></div></section>
+---
+import { getTranslations } from '../i18n/translations';
+
+const t = getTranslations(Astro.currentLocale);
+---
+<section class="wine" id="wine" aria-labelledby="wine-title"><figure><img src="/images/degusta/wine.webp" width="1600" height="900" alt={t.wine.imgAlt} loading="lazy" /></figure><div class="menu-item-copy"><p class="eyebrow">WINE</p><h3 id="wine-title">{t.wine.heading}</h3><p class="body-copy">{t.wine.text[0]}<br />{t.wine.text[1]}<br />{t.wine.text[2]}</p></div></section>

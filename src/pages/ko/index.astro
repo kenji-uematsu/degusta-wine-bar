@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Concept from '../../components/Concept.astro';
+import Commitment from '../../components/Commitment.astro';
+import Wine from '../../components/Wine.astro';
+import Food from '../../components/Food.astro';
+import Scenes from '../../components/Scenes.astro';
+import Instagram from '../../components/Instagram.astro';
+import Access from '../../components/Access.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import { getTranslations } from '../../i18n/translations';
+
+const t = getTranslations(Astro.currentLocale);
+---
+<Layout lang="ko"><Header /><main id="main"><Hero /><Concept /><Commitment /><div class="menu-information"><div class="menu-panel" id="menu"><div class="menu-heading"><p class="eyebrow">MENU</p><h2>{t.menu.heading}</h2></div><div class="menu-grid"><Wine /><Food /></div></div><Instagram /></div><Scenes /><Access /><Contact /></main><Footer /></Layout>

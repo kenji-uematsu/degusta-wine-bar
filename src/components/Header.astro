@@ -2,16 +2,27 @@
 import { navigation } from '../data/navigation';
 import { Menu, X } from '@lucide/astro';
 import ReservationLink from './ReservationLink.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getTranslations } from '../i18n/translations';
+
+const t = getTranslations(Astro.currentLocale);
 ---
 <header class="header">
-  <a class="logo" href="#top" aria-label="Degusta wine shop & bar ホーム"><img class="brand-logo" src="/illustrations/degusta-logo-white.svg" width="210" height="100" alt="Degusta wine shop & bar" /></a>
-  <nav class="desktop-nav" aria-label="メインナビゲーション">{navigation.map(item => <a href={item.href}>{item.label}</a>)}</nav>
-  <details class="mobile-menu"><summary aria-label="メニューを開く"><Menu class="menu-open-icon" size={32} stroke-width={1.5} aria-hidden="true" /><X class="menu-close-icon" size={32} stroke-width={1.5} aria-hidden="true" /></summary><nav aria-label="モバイルナビゲーション">{navigation.map(item => <a href={item.href}>{item.label}</a>)}<ReservationLink class="nav-contact" showPhone={false} showArrow={false} /></nav></details>
+  <a class="logo" href="#top" aria-label={t.header.homeAria}><img class="brand-logo" src="/illustrations/degusta-logo-white.svg" width="210" height="100" alt="Degusta wine shop & bar" /></a>
+  <div class="header-nav">
+    <nav class="desktop-nav" aria-label={t.header.mainNav}>{navigation.map(item => <a href={item.href}>{t.nav[item.key]}</a>)}</nav>
+    <div class="header-actions">
+      <LanguageSwitcher />
+      <details class="mobile-menu" data-open-label={t.header.openMenu} data-close-label={t.header.closeMenu}><summary aria-label={t.header.openMenu}><Menu class="menu-open-icon" size={32} stroke-width={1.5} aria-hidden="true" /><X class="menu-close-icon" size={32} stroke-width={1.5} aria-hidden="true" /></summary><nav aria-label={t.header.mobileNav}>{navigation.map(item => <a href={item.href}>{t.nav[item.key]}</a>)}<ReservationLink class="nav-contact" showPhone={false} showArrow={false} /></nav></details>
+    </div>
+  </div>
 </header>
 <script>
   const mobileMenu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
   mobileMenu?.addEventListener('toggle', () => {
-    mobileMenu.querySelector('summary')?.setAttribute('aria-label', mobileMenu.open ? 'メニューを閉じる' : 'メニューを開く');
+    const openLabel = mobileMenu.dataset.openLabel ?? 'Open menu';
+    const closeLabel = mobileMenu.dataset.closeLabel ?? 'Close menu';
+    mobileMenu.querySelector('summary')?.setAttribute('aria-label', mobileMenu.open ? closeLabel : openLabel);
   });
   document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', () => document.querySelector('.mobile-menu')?.removeAttribute('open')));
   document.addEventListener('keydown', (event) => { if(event.key === 'Escape') { const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu'); if(menu?.open) { menu.open = false; menu.querySelector<HTMLElement>('summary')?.focus(); } } });

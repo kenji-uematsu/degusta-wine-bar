@@ -1,0 +1,29 @@
+---
+import { Globe } from '@lucide/astro';
+import { getTranslations } from '../i18n/translations';
+
+const languages = [
+  { code: 'ja', label: '日本語', href: '/' },
+  { code: 'en', label: 'English', href: '/en/' },
+  { code: 'ko', label: '한국어', href: '/ko/' },
+];
+
+const path = Astro.url.pathname;
+const currentCode = path.startsWith('/en') ? 'en' : path.startsWith('/ko') ? 'ko' : 'ja';
+const currentLabel = languages.find((lang) => lang.code === currentCode)?.label ?? '日本語';
+const t = getTranslations(currentCode);
+---
+<details class="lang-switch">
+  <summary aria-label={t.languageSwitcherAria}><Globe size={20} stroke-width={1.5} aria-hidden="true" /><span class="lang-current">{currentLabel}</span></summary>
+  <ul>
+    {languages.map((lang) => (
+      <li><a class="lang-option" href={lang.href} aria-current={lang.code === currentCode ? 'true' : undefined}>{lang.label}</a></li>
+    ))}
+  </ul>
+</details>
+<script>
+  const switcher = document.querySelector<HTMLDetailsElement>('.lang-switch');
+  document.addEventListener('click', (event) => {
+    if (switcher?.open && !switcher.contains(event.target as Node)) switcher.removeAttribute('open');
+  });
+</script>

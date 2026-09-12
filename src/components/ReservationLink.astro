@@ -1,9 +1,11 @@
 ---
 import { Phone, ArrowRight } from '@lucide/astro';
 import { site } from '../data/site';
+import { getTranslations } from '../i18n/translations';
 interface Props { class?: string; showArrow?: boolean; showPhone?: boolean; }
 const { class: className = 'button', showArrow = true, showPhone = true } = Astro.props;
-const label = 'ご予約・お問い合わせ';
+const t = getTranslations(Astro.currentLocale);
+const label = t.reservation.label;
 ---
 <span class="reservation-switch inline-flex md:hidden"><a class={className} href={site.telephoneUrl}>{label}{showPhone && <Phone size={18} stroke-width={1.5} aria-hidden="true" />}</a></span>
 <span class="reservation-switch hidden md:inline-flex"><a class={className} href="#contact">{label}{showArrow && <ArrowRight size={18} stroke-width={1.5} aria-hidden="true" />}</a></span>

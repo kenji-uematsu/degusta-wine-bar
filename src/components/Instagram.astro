@@ -1,5 +1,8 @@
 ---
 import { ExternalLink } from '@lucide/astro';
 import { site } from '../data/site';
+import { getTranslations } from '../i18n/translations';
+
+const t = getTranslations(Astro.currentLocale);
 ---
-<section class="instagram" id="instagram" aria-labelledby="instagram-title"><div class="event-section-heading"><p class="eyebrow">EVENT &amp; INFORMATION</p><h2 class="section-jp" id="instagram-title">イベント・お知らせ</h2></div><div class="instagram-content"><div class="instagram-copy"><p class="body-copy">最新のイベントや営業情報は、Instagramでお知らせしています。</p></div><div class="instagram-action"><a class="button outline-button" href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram<ExternalLink size={18} stroke-width={1.5} aria-hidden="true" /></a></div></div></section>
+<section class="instagram" id="instagram" aria-labelledby="instagram-title"><div class="event-section-heading"><p class="eyebrow">EVENT &amp; INFORMATION</p><h2 class="section-jp" id="instagram-title">{t.instagram.heading}</h2></div><div class="instagram-content"><div class="instagram-copy"><p class="body-copy">{t.instagram.text}</p></div><div class="instagram-action"><a class="button outline-button" href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram<ExternalLink size={18} stroke-width={1.5} aria-hidden="true" /></a></div></div></section>

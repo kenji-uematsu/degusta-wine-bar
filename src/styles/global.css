@@ -17,3 +17,13 @@ body{overflow-wrap:break-word}.section>*{min-width:0}.body-copy{color:#5b6557;fo
 .access-info .last-entry{display:inline-block;font-size:13px;margin-left:4px}
 .concept-intro .eyebrow,.concept-intro h2{text-align:center}
 @media(min-width:768px){.concept-intro .eyebrow,.concept-intro h2{text-align:left}}
+.header-actions{display:flex;align-items:center;gap:10px}
+.header-nav{display:flex;align-items:center;gap:30px}
+.lang-switch{position:relative}
+.lang-switch summary{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;letter-spacing:.05em;min-height:44px;list-style:none;color:inherit}
+.lang-switch summary::-webkit-details-marker{display:none}
+.lang-switch ul{position:absolute;right:0;top:100%;margin:6px 0 0;padding:6px;list-style:none;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:4px;box-shadow:0 8px 20px #25463824;min-width:120px;z-index:20}
+.lang-switch li+li{margin-top:2px}
+.lang-switch .lang-option{display:block;width:100%;padding:10px 12px;text-align:left;font-size:13px;border-radius:3px;background:none;border:0;cursor:pointer;color:inherit;text-decoration:none}
+.lang-switch .lang-option:hover{background:#f0ede2}
+.lang-switch .lang-option[aria-current]{font-weight:600;color:var(--green)}
