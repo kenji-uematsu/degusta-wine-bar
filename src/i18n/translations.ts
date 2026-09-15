@@ -54,8 +54,8 @@ export const translations = {
       barHeading: 'グラスワインと、料理を。',
       barText: ['その日の気分で選ぶ一杯と、', 'ワインに寄り添う料理を店内で。'],
       shopImgAlt: '手書きの黒板と棚に並ぶ販売用のワインボトル',
-      shopHeading: 'お気に入りの一本を、おうちへ。',
-      shopText: ['ご自宅用にも、贈りものにも。', 'ワインのお買い物だけでもお気軽に。'],
+      shopHeading: 'ワインのある楽しみを、おうちへ。',
+      shopText: ['ワインやグラス、食卓を彩る食材も。', 'ご自宅用にも、贈りものにも。', 'お買い物だけでも、お気軽にどうぞ。'],
     },
     commitment: {
       heading: 'こだわり',
@@ -182,8 +182,8 @@ export const translations = {
       barHeading: 'A glass of wine, a bite to eat.',
       barText: ['A glass to suit your mood,', 'with food to complement it, here at the bar.'],
       shopImgAlt: 'A handwritten chalkboard and wine bottles for sale on the shelves',
-      shopHeading: 'Take a favorite bottle home.',
-      shopText: ['For your own table or as a gift.', "You're welcome to stop by just to shop."],
+      shopHeading: 'Bring the pleasure of wine home.',
+      shopText: ['Wine, glasses, and ingredients to dress up your table.', 'For your own table or as a gift.', "You're welcome to stop by just to shop."],
     },
     commitment: {
       heading: 'Our approach',
@@ -310,8 +310,8 @@ export const translations = {
       barHeading: '와인 한 잔과 맛있는 음식.',
       barText: ['그날의 기분에 맞는 한 잔과', '와인에 어울리는 음식을 매장에서 즐겨 보세요.'],
       shopImgAlt: '손글씨 칠판과 진열된 판매용 와인 병들',
-      shopHeading: '마음에 드는 한 병을 집으로.',
-      shopText: ['집에서 즐길 와인도, 선물할 와인도.', '와인만 구매하러 오셔도 환영합니다.'],
+      shopHeading: '와인이 있는 즐거움을, 집으로.',
+      shopText: ['와인과 잔, 식탁을 풍성하게 할 식재료까지.', '집에서 즐길 와인도, 선물할 와인도.', '와인만 구매하러 오셔도 환영합니다.'],
     },
     commitment: {
       heading: '우리의 이야기',
