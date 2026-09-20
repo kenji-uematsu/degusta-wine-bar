@@ -40,7 +40,7 @@
 
 /* Real store photography: retain the round window, seats and exterior sign. */
 .hero-photo>img{object-position:35% center}
-.access-photo img{aspect-ratio:4/3;object-position:center}
+.access-photo img{aspect-ratio:16/9;object-position:center}
 .scene-photo{margin:28px auto 0;max-width:1040px}
 .scene-photo img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 48%;border-radius:0}
 @media(max-width:767px){.hero-photo>img{aspect-ratio:4/3;object-position:center}.scene-photo img{aspect-ratio:4/3}.concept-experience>img{aspect-ratio:1.1;object-position:center}}

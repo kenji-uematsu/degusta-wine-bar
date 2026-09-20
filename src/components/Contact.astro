@@ -6,11 +6,15 @@ import { getTranslations } from '../i18n/translations';
 const t = getTranslations(Astro.currentLocale);
 ---
 <section class="contact section" id="contact" aria-labelledby="contact-title" tabindex="-1">
-  <p class="eyebrow">{t.contact.eyebrow}</p>
-  <h2 id="contact-title">{t.contact.heading[0]}<br class="mobile-break" />{t.contact.heading[1]}</h2>
-  <p class="body-copy">{t.contact.text[0]}<br />{t.contact.text[1]}</p>
+  <div class="contact-intro">
+    <p class="eyebrow">{t.contact.eyebrow}</p>
+    <h2 id="contact-title">{t.contact.heading[0]}<br class="mobile-break" />{t.contact.heading[1]}</h2>
+    <p class="body-copy contact-sommelier-copy">{t.contact.sommelierText}</p>
+    <p class="body-copy contact-invitation">{t.contact.text[0]}<br />{t.contact.text[1]}</p>
+  </div>
   <div class="contact-actions">
     <a class="button" href={site.telephoneUrl} aria-label={`${t.contact.phoneAria} ${site.phone}`}>{site.phone}<Phone size={20} stroke-width={1.5} aria-hidden="true" /></a>
     <a class="button outline-button contact-instagram" href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram<ExternalLink size={18} stroke-width={1.5} aria-hidden="true" /></a>
   </div>
 </section>
+

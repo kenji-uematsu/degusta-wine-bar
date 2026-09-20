@@ -129,6 +129,7 @@ export const translations = {
     contact: {
       eyebrow: 'LET’S MAKE IT A GOOD TIME.',
       heading: ['一杯の予定、', '立てませんか。'],
+      sommelierText: 'ソムリエの朴が、あなたの好みに合う一杯をご一緒に選びます。',
       text: ['ご予約も、貸切のご相談も。', 'ご質問は、お電話でどうぞ。'],
       phoneAria: '電話で予約・お問い合わせ',
     },
@@ -257,6 +258,7 @@ export const translations = {
     contact: {
       eyebrow: 'LET’S MAKE IT A GOOD TIME.',
       heading: ['Shall we make time', 'for a glass?'],
+      sommelierText: 'Our sommelier, Park, will help you choose a glass that suits your taste.',
       text: ['Reservations and private gatherings, all welcome.', 'For any questions, please give us a call.'],
       phoneAria: 'Call to reserve or contact us at',
     },
@@ -385,6 +387,7 @@ export const translations = {
     contact: {
       eyebrow: 'LET’S MAKE IT A GOOD TIME.',
       heading: ['와인 한 잔,', '함께할까요?'],
+      sommelierText: '소믈리에 박이 당신의 취향에 맞는 한 잔을 함께 골라드립니다.',
       text: ['예약이나 대관 상담,', '궁금한 점은 전화로 문의해 주세요.'],
       phoneAria: '전화로 예약・문의하기',
     },
