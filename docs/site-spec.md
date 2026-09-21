@@ -224,7 +224,7 @@
 - Instagramへの明確な導線を設ける
 - Instagramアカウントは以下を使用する
 
-  <https://www.instagram.com/sihasama/>
+  <https://www.instagram.com/degusta_wine/>
 
 - 最新のイベントや営業情報はInstagramを中心に発信する
 - Webサイト上では以下の案内を掲載する
@@ -443,7 +443,7 @@
 | 電話番号 | 090-9646-8282 |
 | 基本営業時間 | 19:00〜翌3:00 |
 | 定休日 | 火曜日 |
-| Instagram | <https://www.instagram.com/sihasama/> |
+| Instagram | <https://www.instagram.com/degusta_wine/> |
 | 最新営業情報 | Instagramで案内 |
 | 貸切 | 10〜15名程度 |
 

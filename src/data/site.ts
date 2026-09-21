@@ -2,7 +2,7 @@
 const address = '神奈川県川崎市中原区新丸子東1-837-9 1F';
 export const site = {
   name: 'Degusta', description: 'wine shop & bar',
-  instagramUrl: 'https://www.instagram.com/sihasama/',
+  instagramUrl: 'https://www.instagram.com/degusta_wine/',
   phone: '090-9646-8282', telephoneUrl: 'tel:09096468282',
   email: 'shrike.park@gmail.com', mailtoUrl: 'mailto:shrike.park@gmail.com',
   address, hours: '19:00〜翌5:00', lastEntry: '翌3:00', closedDays: '火曜日',
