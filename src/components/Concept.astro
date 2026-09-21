@@ -7,11 +7,11 @@ const t = getTranslations(Astro.currentLocale);
   <div class="concept-intro"><p class="eyebrow">CONCEPT</p><h2>{t.concept.heading}</h2><div class="prose"><p>{t.concept.prose[0][0]}<br />{t.concept.prose[0][1]}</p><p>{t.concept.prose[1][0]}<br />{t.concept.prose[1][1]}</p><p>{t.concept.prose[2][0]}<br />{t.concept.prose[2][1]}</p></div></div>
   <div class="concept-experiences" aria-label={t.concept.experiencesAria}>
     <article class="concept-experience">
-      <img src="/images/degusta/bar-wine-food.webp" width="1600" height="1200" alt={t.concept.barImgAlt} loading="lazy" />
+      <img src="/images/degusta/bar-wine-food.webp" srcset="/images/degusta/bar-wine-food-800.webp 800w, /images/degusta/bar-wine-food.webp 1600w" sizes="(min-width: 768px) 45vw, 100vw" width="1600" height="1200" alt={t.concept.barImgAlt} loading="lazy" />
       <div><p class="eyebrow">BAR</p><h3>{t.concept.barHeading}</h3><p>{t.concept.barText[0]}<br />{t.concept.barText[1]}</p></div>
     </article>
     <article class="concept-experience">
-      <img src="/images/degusta/store-shop.webp" width="900" height="506" alt={t.concept.shopImgAlt} loading="lazy" />
+      <img src="/images/degusta/store-shop.webp" srcset="/images/degusta/store-shop-640.webp 640w, /images/degusta/store-shop.webp 900w" sizes="(min-width: 768px) 45vw, 100vw" width="900" height="506" alt={t.concept.shopImgAlt} loading="lazy" />
       <div><p class="eyebrow">WINE SHOP</p><h3>{t.concept.shopHeading}</h3><p>{t.concept.shopText[0]}<br />{t.concept.shopText[1]}<br />{t.concept.shopText[2]}</p></div>
     </article>
   </div>
