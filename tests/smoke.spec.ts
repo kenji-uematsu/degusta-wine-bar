@@ -67,23 +67,12 @@ test.describe('問い合わせ', () => {
   });
 });
 
-test.describe('予約CTAの出し分け（2-12）', () => {
-  test('Mobileではtel:リンクが表示される', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'mobile-390', 'mobile-390プロジェクトのみ対象');
+test.describe('予約CTA', () => {
+  test('スマホ・PCともに#contactアンカーが表示される', async ({ page }) => {
     await page.goto('/');
-    const telCta = page.locator('.hero-actions .reservation-switch a[href^="tel:"]');
-    const anchorCta = page.locator('.hero-actions .reservation-switch a[href="#contact"]');
-    await expect(telCta).toBeVisible();
-    await expect(anchorCta).toBeHidden();
-  });
-
-  test('Tablet/PCでは#contactアンカーが表示される', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name === 'mobile-390', 'tablet/desktopプロジェクトのみ対象');
-    await page.goto('/');
-    const telCta = page.locator('.hero-actions .reservation-switch a[href^="tel:"]');
     const anchorCta = page.locator('.hero-actions .reservation-switch a[href="#contact"]');
     await expect(anchorCta).toBeVisible();
-    await expect(telCta).toBeHidden();
   });
 });
+
 

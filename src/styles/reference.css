@@ -88,7 +88,7 @@
 
 .style-grid article{padding-left:0}.style-icon{display:block;width:56px;height:56px;margin-bottom:14px;object-fit:contain}
 
-.contact-instagram::before{content:"";width:18px;flex:0 0 18px}
+.contact-email::before{content:"";width:18px;flex:0 0 18px}
 
 .instagram-action>.button::before{content:"";width:18px;flex:0 0 18px}
 

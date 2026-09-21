@@ -1,5 +1,5 @@
 ---
-import { Phone, ExternalLink } from '@lucide/astro';
+import { Phone, Mail } from '@lucide/astro';
 import { site } from '../data/site';
 import { getTranslations } from '../i18n/translations';
 
@@ -15,7 +15,7 @@ const t = getTranslations(Astro.currentLocale);
   </figure>
   <div class="contact-actions">
     <a class="button" href={site.telephoneUrl} aria-label={`${t.contact.phoneAria} ${site.phone}`}>{site.phone}<Phone size={20} stroke-width={1.5} aria-hidden="true" /></a>
-    <a class="button outline-button contact-instagram" href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram<ExternalLink size={18} stroke-width={1.5} aria-hidden="true" /></a>
+    <a class="button outline-button contact-email" href={site.mailtoUrl} aria-label={`${t.contact.emailAria} ${site.email}`}>{t.contact.emailLabel}<Mail size={18} stroke-width={1.5} aria-hidden="true" /></a>
   </div>
 </section>
 

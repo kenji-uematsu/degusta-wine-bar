@@ -13,7 +13,7 @@ const t = getTranslations(Astro.currentLocale);
     <nav class="desktop-nav" aria-label={t.header.mainNav}>{navigation.map(item => <a href={item.href}>{t.nav[item.key]}</a>)}</nav>
     <div class="header-actions">
       <LanguageSwitcher />
-      <details class="mobile-menu" data-open-label={t.header.openMenu} data-close-label={t.header.closeMenu}><summary aria-label={t.header.openMenu}><Menu class="menu-open-icon" size={32} stroke-width={1.5} aria-hidden="true" /><X class="menu-close-icon" size={32} stroke-width={1.5} aria-hidden="true" /></summary><nav aria-label={t.header.mobileNav}>{navigation.map(item => <a href={item.href}>{t.nav[item.key]}</a>)}<ReservationLink class="nav-contact" showPhone={false} showArrow={false} /></nav></details>
+      <details class="mobile-menu" data-open-label={t.header.openMenu} data-close-label={t.header.closeMenu}><summary aria-label={t.header.openMenu}><Menu class="menu-open-icon" size={32} stroke-width={1.5} aria-hidden="true" /><X class="menu-close-icon" size={32} stroke-width={1.5} aria-hidden="true" /></summary><nav aria-label={t.header.mobileNav}>{navigation.map(item => <a href={item.href}>{t.nav[item.key]}</a>)}<ReservationLink class="nav-contact" showArrow={false} /></nav></details>
     </div>
   </div>
 </header>
