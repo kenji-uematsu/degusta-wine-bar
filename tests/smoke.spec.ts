@@ -22,7 +22,9 @@ test.describe('アクセス情報', () => {
     await page.goto('/#access');
     const access = page.locator('#access');
     await expect(access).toContainText(site.address || '正式な住所は確認中です。');
-    await expect(access).toContainText(site.access || '最寄り駅・道順は確認後に掲載します。');
+    for (const line of site.access) {
+      await expect(access).toContainText(line);
+    }
     await expect(access).toContainText(site.hours || '正式な営業時間は確認中です。');
     await expect(access).toContainText(site.closedDays || '確認後に掲載します。');
   });

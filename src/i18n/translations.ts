@@ -261,7 +261,7 @@ export const translations = {
       hoursValue: '19:00–05:00 (next day)',
       lastEntryValue: '03:00 (next day)',
       closedDaysValue: 'Tuesdays',
-      accessValue: '3-minute walk from Shin-Maruko Station',
+      accessValue: ['3-minute walk from Shin-Maruko Station', '6–11-minute walk from Musashi-Kosugi Station'],
     },
     contact: {
       eyebrow: 'LET’S MAKE IT A GOOD TIME.',
@@ -395,7 +395,7 @@ export const translations = {
       hoursValue: '19:00~다음날 05:00',
       lastEntryValue: '다음날 03:00',
       closedDaysValue: '화요일',
-      accessValue: '신마루코역에서 도보 3분',
+      accessValue: ['신마루코역에서 도보 3분', '무사시코스기역에서 도보 6~11분'],
       addressValue: '1F, 1-837-9 Shin-Maruko Higashi, Nakahara-ku, Kawasaki, Kanagawa',
     },
     contact: {
