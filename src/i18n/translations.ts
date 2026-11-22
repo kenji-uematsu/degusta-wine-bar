@@ -9,7 +9,7 @@ export const translations = {
     skipToContent: '本文へ移動',
     languageSwitcherAria: '表示言語を選択',
     meta: {
-      title: '新丸子のワインバー・ワインショップ | Degusta',
+      title: '新丸子・武蔵小杉のワインバー・ワインショップ | Degusta',
       description: '新丸子駅から徒歩3分のDegusta。気軽にグラスワインと料理を楽しめるワインバー・ワインショップです。ワインの購入だけでも、おひとりでもどうぞ。',
     },
     nav: {
@@ -144,7 +144,7 @@ export const translations = {
     skipToContent: 'Skip to content',
     languageSwitcherAria: 'Select display language',
     meta: {
-      title: 'Shin-Maruko Wine Bar & Wine Shop | Degusta',
+      title: 'Shin-Maruko & Musashi-Kosugi Wine Bar & Wine Shop | Degusta',
       description: "Degusta is a 3-minute walk from Shin-Maruko Station — a wine bar & wine shop where you can enjoy a casual glass of wine and good food. Feel free to stop by just to shop for wine, or come on your own.",
     },
     nav: {
@@ -279,7 +279,7 @@ export const translations = {
     skipToContent: '본문으로 이동',
     languageSwitcherAria: '표시 언어 선택',
     meta: {
-      title: '신마루코 와인바・와인숍 | Degusta',
+      title: '신마루코・무사시코스기 와인바・와인숍 | Degusta',
       description: '신마루코역에서 도보 3분 거리의 Degusta. 편하게 글라스 와인과 요리를 즐길 수 있는 와인바・와인숍입니다. 와인 구매만 하셔도, 혼자 오셔도 좋습니다.',
     },
     nav: {
